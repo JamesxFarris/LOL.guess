@@ -23,7 +23,7 @@ const champions = ["Aatrox","Ahri","Akali","Alistar","Amumu","Anivia","Annie","A
 
 //Design the script to create folders
 champions.forEach(champion => {
-    const dir = path.join(_dirname, "assets", "sounds", champion);
+    const dir = path.join(__dirname, "assets", "sounds", champion);
     if (!fs.existsSync(dir)){
         fs.mkdirSync(dir, { recursive: true });
         console.log(`Created folder for ${champion}`);
